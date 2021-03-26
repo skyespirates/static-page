@@ -1,0 +1,64 @@
+@import "colors";
+@import "media-queries";
+%align-center {
+  display: flex;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  background-color: $light;
+  position: relative;
+  z-index: 10;
+  &__logo {
+    margin-left: 24px;
+    color: $dark;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    @extend %align-center;
+  }
+  &__bars {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    @include tablet {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+  &__menu {
+    @extend %align-center;
+    margin-right: 24px;
+    @include tablet {
+      display: none;
+    }
+    &--links {
+      color: $dark;
+      text-decoration: none;
+      padding: 0 1rem;
+      text-transform: capitalize;
+      &:hover {
+        color: $lime;
+        transition: all 0.3s ease;
+      }
+    }
+    #button {
+      color: $light;
+      background-color: $lime;
+      border-style: none;
+      outline-style: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      margin-left: 16px;
+      &:hover {
+        background-color: $orangeRed;
+        transition: 0.3s ease all;
+      }
+    }
+  }
+}
