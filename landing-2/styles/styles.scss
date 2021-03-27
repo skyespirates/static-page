@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap);
+$hitam: #000;
+$putih: #fff;
+$biru: #226a80;
+$tablet: 768px;
+@mixin mq($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+.wrapper {
+  position: relative;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  border: 1px solid crimson;
+  .container {
+    max-width: 1200px;
+    border: 1px solid purple;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    @include mq($tablet) {
+      padding: 0 2rem;
+    }
+    &__header {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      border: 1px solid blue;
+      &--brand {
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      &--navigation {
+        color: $hitam;
+        &--links {
+          text-decoration: none;
+          text-transform: uppercase;
+          margin-left: 20px;
+          padding: 12px 24px;
+          border: 1px solid purple;
+        }
+      }
+    }
+    &__body {
+      position: relative;
+      max-width: 650px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      h1 {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 3rem;
+        color: $biru;
+      }
+      h2 {
+        color: $putih;
+        font-weight: 600;
+        font-size: 3rem;
+        text-transform: uppercase;
+      }
+      p {
+        font-weight: 900;
+      }
+      button {
+        text-transform: uppercase;
+      }
+    }
+    &__footer {
+      position: relative;
+      // bottom: 0;
+      border: 1px solid crimson;
+      width: 100%;
+      // height: 100px;
+      &--logo {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: $hitam;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+.wrapper {
+  position: relative;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  border: 1px solid crimson;
+}
+
+.wrapper .container {
+  max-width: 1200px;
+  border: 1px solid purple;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .container {
+    padding: 0 2rem;
+  }
+}
+
+.wrapper .container__header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  border: 1px solid blue;
+}
+
+.wrapper .container__header--brand {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.wrapper .container__header--navigation {
+  color: #000;
+}
+
+.wrapper .container__header--navigation--links {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 20px;
+  padding: 12px 24px;
+  border: 1px solid purple;
+}
+
+.wrapper .container__body {
+  position: relative;
+  max-width: 650px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container__body h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #226a80;
+}
+
+.wrapper .container__body h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.wrapper .container__body p {
+  font-weight: 900;
+}
+
+.wrapper .container__body button {
+  text-transform: uppercase;
+}
+
+.wrapper .container__footer {
+  position: relative;
+  border: 1px solid crimson;
+  width: 100%;
+}
+
+.wrapper .container__footer--logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  color: #000;
+}
+/*# sourceMappingURL=styles.css.map */
