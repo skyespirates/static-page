@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+$mobile: 576px;
+@mixin mq($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+  }
+  &__bar {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    @include mq($mobile) {
+      display: flex;
+    }
+  }
+  &__menu {
+    &--link {
+      padding: 4px 8px;
+      &:hover {
+        background-color: rgba(black, 0.3);
+      }
+    }
+    @include mq($mobile) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      background-color: rgba(black, 0.7);
+      transition: 0.5s ease display;
+    }
+  }
+}
+.active {
+  display: flex;
+}
