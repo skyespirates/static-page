@@ -10,15 +10,23 @@ $mobile: 576px;
     @content;
   }
 }
+
+// styling
+body {
+  position: relative;
+  height: 100vh;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  align-items: center;
+  background-color: rgba(black, 0.7);
+  height: 3rem;
+
   a {
-    text-transform: uppercase;
     text-decoration: none;
     color: black;
-    font-size: 1.5rem;
   }
   &__bar {
     font-size: 2rem;
@@ -37,11 +45,11 @@ $mobile: 576px;
     }
     @include mq($mobile) {
       display: none;
+      position: absolute;
       flex-direction: column;
       position: absolute;
       width: 100%;
       text-align: center;
-      margin-top: 2rem;
       background-color: rgba(black, 0.7);
       transition: 0.5s ease display;
     }
@@ -49,4 +57,5 @@ $mobile: 576px;
 }
 .active {
   display: flex;
+  top: 3rem;
 }
