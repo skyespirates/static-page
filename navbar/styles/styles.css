@@ -44,6 +44,11 @@ body {
   }
 }
 
+.navbar__menu {
+  -webkit-transition: 0.5s ease-in all;
+  transition: 0.5s ease-in all;
+}
+
 .navbar__menu--link {
   padding: 4px 8px;
 }
@@ -55,7 +60,6 @@ body {
 @media (max-width: 576px) {
   .navbar__menu {
     display: none;
-    position: absolute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -64,8 +68,6 @@ body {
     width: 100%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
-    -webkit-transition: 0.5s ease display;
-    transition: 0.5s ease display;
   }
 }
 
