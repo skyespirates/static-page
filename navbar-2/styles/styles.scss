@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgb(102, 34, 34);
+  &__logo {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    color: rgb(223, 205, 205);
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 30%;
+    a {
+      color: rgb(223, 205, 205);
+      text-decoration: none;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  &__burger {
+    display: none;
+    div {
+      width: 24px;
+      height: 3px;
+      background-color: rgb(223, 205, 205);
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+    }
+  }
+}
