@@ -44,7 +44,7 @@ section {
 }
 .burger {
   cursor: pointer;
-  /* display: none; */
+  display: none;
 }
 .burger div {
   height: 4px;
@@ -58,5 +58,8 @@ section {
 @media screen and (max-width: 576px) {
   nav {
     background-color: crimson;
+  }
+  .burger {
+    display: block;
   }
 }
